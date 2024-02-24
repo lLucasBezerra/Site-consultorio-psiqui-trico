@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+:root{
+    --cor-primaria: #E8F1F2;
+    --cor-secundaria: #c894f9;
+    --cor-terciaria: #464659;
+    --cor-quartenaria: #4b295d;
+    
+    --fonte-titulo: "Roboto Slab", serif;;
+    --font-texto: "Poppins", sans-serif;
+}
+/* --- svg --- */
+.custom-shape-divider-bottom-1708726184 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1708726184 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 180px;
+    filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.1));
+}
+
+.custom-shape-divider-bottom-1708726184 .shape-fill {
+    fill: var(--cor-primaria);
+}
+/* --- --- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-titulo);
+}
+body{
+    background-color: var(--cor-primaria);
+}
+.container{
+    position: relative;
+    width: auto;
+}
+nav{
+    width: 100%;
+    position: sticky;
+    z-index: 1;
+    background-color: var(--cor-quartenaria);
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding-block: .8rem;
+    padding-inline: 1.5rem;
+
+}
+nav ul{
+    
+    display: flex;
+    gap: 1.5rem;
+}
+nav ul a{
+    text-decoration: none;
+    color: #ffffff;
+}
+nav ul li{
+    list-style: none;
+}
+header{
+    background: rgb(200,148,249);
+    background: linear-gradient(0deg, rgba(200,148,249,1) 0%, rgba(75,41,93,1) 100%);
+    position: relative;
+    height: 100vh;
+}
