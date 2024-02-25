@@ -1,77 +1,204 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
-:root{
-    --cor-primaria: #E8F1F2;
-    --cor-secundaria: #c894f9;
-    --cor-terciaria: #464659;
-    --cor-quartenaria: #4b295d;
-    
-    --fonte-titulo: "Roboto Slab", serif;;
-    --font-texto: "Poppins", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); */
+:root {
+  --cor-primaria: #e8f1f2;
+  --cor-secundaria: #c894f9;
+  --cor-terciaria: #464659;
+  --cor-quartenaria: #4b295d;
+
+  --cor-destaque: #ff6600;
+  --cor-wpp: #128b4d;
+
+  --fonte-titulo: "Lato", sans-serif;
+  --font-texto: "Poppins", sans-serif;
+  font-size: 62.5%; /*rem = 10px*/
 }
 /* --- svg --- */
 .custom-shape-divider-bottom-1708726184 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  height: 20rem;
 }
 
 .custom-shape-divider-bottom-1708726184 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 180px;
-    filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 0.1));
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 180px;
+  filter: drop-shadow(0px 0.4rem 0.4rem rgb(0 0 0 / 0.3));
 }
 
 .custom-shape-divider-bottom-1708726184 .shape-fill {
-    fill: var(--cor-primaria);
+  fill: var(--cor-primaria);
 }
 /* --- --- */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--fonte-titulo);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-texto);
 }
-body{
-    background-color: var(--cor-primaria);
+html {
+  scroll-behavior: smooth;
 }
-.container{
-    position: relative;
-    width: auto;
+body {
+  background-color: var(--cor-primaria);
 }
-nav{
-    width: 100%;
-    position: sticky;
-    z-index: 1;
-    background-color: var(--cor-quartenaria);
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    padding-block: .8rem;
-    padding-inline: 1.5rem;
+body::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: var(--cor-quartenaria);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--cor-secundaria);
+  border-radius: 10px;
+  opacity: 0.1;
+}
+.container {
+  position: relative;
+  width: auto;
+}
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: var(--cor-quartenaria);
+  color: var(--cor-primaria);
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1.2rem;
+  padding-inline: 2rem;
+  font-size: 1.6rem;
+}
+nav ul {
+  display: flex;
+  gap: 2.5rem;
+}
+nav ul a {
+  text-decoration: none;
+  color: #ffffff;
+}
+nav ul li {
+  list-style: none;
+}
+header {
+  margin-top: 4rem;
+  background: rgb(200, 148, 249);
+  background: linear-gradient(
+    0deg,
+    rgba(200, 148, 249, 1) 0%,
+    rgba(75, 41, 93, 1) 100%
+  );
+  position: relative;
+  height: 100vh;
+  display: flex;
+  padding-block: 6.4rem;
+  padding-inline: 10rem;
+  justify-content: space-between;
+}
+.texto-inicio {
+  margin-top: 3rem;
+  width: 40%;
+  font-size: clamp(0.2rem, 2rem, 3rem);
+  color: var(--cor-primaria);
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+}
+.texto-inicio .texto-destaque {
+  color: var(--cor-destaque);
+  text-shadow: 0px 3px 3px rgb(0 0 0 / 0.3);
+}
+.texto-inicio h1 {
+  margin-bottom: 2rem;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--fonte-titulo);
+  text-shadow: 0px 3px 3px rgb(0 0 0 / 0.5);
+  font-weight: 900;
+}
+.botão-agenda {
+  width: 25rem;
+  text-decoration: none;
+  color: var(--cor-primaria);
+  background-color: var(--cor-wpp);
+  box-shadow: 0px 3px 5px rgb(0 0 0 / 0.5);
 
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-radius: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-nav ul{
-    
-    display: flex;
-    gap: 1.5rem;
+.botão-agenda i {
+  font-size: 2.5rem;
 }
-nav ul a{
-    text-decoration: none;
-    color: #ffffff;
+.botão-agenda:hover {
+  background-color: #169755;
 }
-nav ul li{
-    list-style: none;
+#explicacao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
 }
-header{
-    background: rgb(200,148,249);
-    background: linear-gradient(0deg, rgba(200,148,249,1) 0%, rgba(75,41,93,1) 100%);
-    position: relative;
-    height: 100vh;
+#explicacao article {
+  width: 100%;
+  display: flex;
+  padding: 10rem;
+  /* align-content: space-between; */
+  justify-content: center;
+  gap: 3rem;
+
+  /* -webkit-box-shadow: inset 0px 3px 9px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 3px 9px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 3px 9px 0px rgba(0,0,0,0.75); */
+}
+#explicacao article img {
+  width: 40rem;
+  /* border-radius: 7rem 1rem;
+    border: solid 1rem var(--cor-destaque); */
+}
+#explicacao article .primeira-borda {
+  background-color: red;
+  height: 60rem;
+  border-radius: 0rem 7rem 7rem 0rem;
+  border: solid 1rem var(--cor-destaque);
+}
+#explicacao article .segunda-borda {
+  border: solid 1rem var(--cor-wpp);
+  border-radius: 0rem 7rem 7rem 0rem;
+  height: 59rem;
+  overflow: hidden;
+}
+#explicacao article .texto {
+  border-radius: 7rem 0rem 0rem 7rem;
+  width: 50rem;
+  background-color: var(--cor-quartenaria);
+  color: var(--cor-primaria);
+  padding: 3rem;
+  font-size: clamp(1.2rem, 1.5rem, 2rem);
+
+  -webkit-box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.75);
+}
+#explicacao article .texto h4 {
+  margin-block: 1rem;
+  color: var(--cor-destaque);
+}
+#explicacao h1 {
+  margin-bottom: 2.5rem;
 }
