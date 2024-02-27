@@ -13,7 +13,13 @@
 
   --fonte-titulo: "Lato", sans-serif;
   --font-texto: "Poppins", sans-serif;
-  font-size: 62.5%; /*rem = 10px*/
+  font-size: 62.5% !important; /*rem = 10px*/
+}
+@media (max-width: 1000px) {
+    #explicacao article{
+        flex-direction: column-reverse;
+
+    }
 }
 /* --- svg --- */
 .custom-shape-divider-bottom-1708726184 {
@@ -21,6 +27,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  padding: 0px !important;
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
@@ -43,16 +50,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--font-texto);
+  font-family: var(--font-texto) !important;
 }
 html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: var(--cor-primaria);
+  background-color: var(--cor-primaria) !important;
 }
 body::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 1.5rem;
   background-color: var(--cor-quartenaria);
 }
 body::-webkit-scrollbar-thumb {
@@ -60,9 +67,11 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   opacity: 0.1;
 }
-.container {
+.container-fluid {
   position: relative;
   width: auto;
+  padding: 0px !important;
+  
 }
 nav {
   width: 100%;
@@ -89,6 +98,7 @@ nav ul li {
   list-style: none;
 }
 header {
+    overflow: hidden;
   margin-top: 4rem;
   background: rgb(200, 148, 249);
   background: linear-gradient(
@@ -123,8 +133,9 @@ header {
 h1,
 h2,
 h3 {
-  font-family: var(--fonte-titulo);
-  text-shadow: 0px 3px 3px rgb(0 0 0 / 0.5);
+  font-family: var(--fonte-titulo) !important;
+  font-weight: 900 !important;
+  text-shadow: 0px 3px 3px rgb(0 0 0 / 0.3);
   font-weight: 900;
 }
 .botão-agenda {
@@ -147,64 +158,55 @@ h3 {
 }
 .botão-agenda:hover {
   background-color: #169755;
+  color: var(--cor-primaria) !important;
 }
-#explicacao {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-}
-#explicacao article {
-  /* background-image: url("./assets/criança-com-mae-2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; */
-  position: relative;
-  width: 100%;
-  display: flex;
-  padding: 10rem;
-}
-/* #explicacao article .fundo-escuro {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: black;
-  opacity: 0.3;
-  z-index: 2;
-} */
-.div-imagem{
-    position: relative;
-    width: 50rem;
-    border: solid 1px red;
-}
-.blob-image-1, .blob-image-2{
-    /* position: absolute; */
-}
-
-.blob-image-2{
+#explicacao{
+    margin-top: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
     
 }
-#explicacao article .texto {
-  position: relative;
-  z-index: 2;
-  border-radius: 7rem 0rem 0rem 7rem;
-  width: 50rem;
-  background-color: var(--cor-quartenaria);
-  color: var(--cor-primaria);
-  padding: 3rem;
-  font-size: clamp(1.2rem, 1.5rem, 2rem);
-
-  -webkit-box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.75);
+#explicacao h1{
+    text-align: center;
+    color: var(--cor-quartenaria);
+    font-size: 4rem;
 }
-
-#explicacao article .texto h4 {
-  margin-block: 1rem;
-  color: var(--cor-destaque);
+#explicacao article{
+    padding: 5rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
 }
-#explicacao h1 {
-  margin-bottom: 2.5rem;
+.imagem-explicacao{
+    border-radius: 5rem;
+    width: 48rem;
+
+}
+#explicacao article .texto-container{
+    position: relative;
+    padding: 3rem;
+
+}
+#explicacao .texto{
+    background: rgb(151,106,188);
+    background: linear-gradient(51deg, rgba(151,106,188,1) 0%, rgba(75,41,93,1) 100%);
+    border-radius: 2rem;
+    font-size: 2rem;
+    padding: 5rem;
+    color: var(--cor-primaria);
+}
+#explicacao .texto-container .fundo-texto{
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+#explicacao .texto h4{
+    color: var(--cor-destaque);
+    text-shadow: 0px 3px 3px rgb(0 0 0 / 0.3);
+    font-size: 2rem;
 }
