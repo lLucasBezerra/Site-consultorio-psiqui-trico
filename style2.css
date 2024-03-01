@@ -13,13 +13,52 @@
 
   --fonte-titulo: "Lato", sans-serif;
   --font-texto: "Poppins", sans-serif;
+  --fonte-size-texto: clamp(1.5rem, -6rem + 5vw, 2rem);
   font-size: 62.5% !important; /*rem = 10px*/
 }
 @media (max-width: 1000px) {
+  :root{
+    --fonte-size-texto: clamp(2rem, -5rem + 5vw, 2rem);
+  
+  }
+  header{
+    padding-inline: 1rem !important;
+  }
+  #explicacao .imagem-explicacao{
+    width: 100%;
+  }
   #explicacao article {
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding-inline: 0px !important;
   }
+  #explicacao article .texto-container{
+    padding: 0px !important;
+  }
+  #explicacao article .texto-container .texto{
+    height: auto;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 0px;
+  }
+  #explicacao article .texto-container .fundo-texto{
+    height:auto;
+  }
+
+  #contato{
+    gap: 3rem !important;
+    flex-direction: column;
+    padding-inline: 1rem !important;
+  }
+  #contato article{
+    width: 100% !important;
+
+  }
+  #contato .map{
+    /* display: none; */
+    width: 100%;
+    overflow: hidden;
+  }
+
 }
 /* --- svg --- */
 .custom-shape-divider-bottom-1708726184 {
@@ -121,7 +160,7 @@ header {
   display: flex;
   flex-direction: column;
 }
-.texto-inicio .texto-destaque {
+.texto-destaque {
   color: var(--cor-destaque);
   text-shadow: 0px 3px 3px rgb(0 0 0 / 0.3);
 }
@@ -193,7 +232,7 @@ h3 {
   );
   border-radius: 2rem;
   height: 60vh;
-  font-size: clamp(1rem, -5rem + 5vw, 2rem);
+  font-size: var(--fonte-size-texto);
   padding: 5rem;
   color: var(--cor-primaria);
 }
@@ -209,9 +248,11 @@ h3 {
 #explicacao .texto h4 {
   color: var(--cor-destaque);
   text-shadow: 0px 3px 3px rgb(0 0 0 / 0.3);
-  font-size: clamp(1.3rem, -1.5rem + 6vw, 2.2rem);
+  font-size: 2.4rem;
+  margin-block: 1rem;
 }
 #competencia {
+  margin-top: 5rem;
   height: 100vh;
   overflow: hidden;
   background-image: url("./assets/imagem-explicacao-03.jpg");
@@ -234,5 +275,58 @@ h3 {
 #competencia article p {
   color: var(--cor-primaria);
   width: 35%;
-  font-size: clamp(1rem, -5rem + 5vw, 2rem);
+  font-size: var(--fonte-size-texto);
+}
+#contato{
+  margin-top: 5rem;
+  background: rgb(164,86,195);
+  background: linear-gradient(0deg, rgba(164,86,195,1) 1%, rgba(78,41,93,1) 100%);
+  width: 100%;
+  padding: 4.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+#contato article{
+  border-radius: 50px;
+background: linear-gradient(145deg, rgba(164,86,195,1), rgba(78,41,93,1));
+box-shadow:  20px 20px 60px rgba(78,41,93,1),
+             -20px -20px 60px rgba(164,86,195,1);
+  color: var(--cor-primaria);
+  padding: 2.5rem;
+  width: 60rem;
+  font-size: var(--fonte-size-texto);
+  border-radius: 2rem;
+}
+#contato article h2{
+  color: var(--cor-destaque);
+  font-size: 2.5rem;
+}
+#contato article .texto-destaque{
+  margin-block: 2rem;
+}
+#contato article a{
+  display: flex;
+  
+  text-decoration: none;
+  color: var(--cor-primaria);
+}
+#contato article a .texto-destaque{
+  display: flex;
+  gap: 1rem;
+  font-size: var(--fonte-size-texto);
+  align-items: center;
+}
+#contato article a i{
+  font-size: 3rem;
+}
+#contato article a:hover{
+  text-decoration: none;
+  color: var(--cor-primaria);
+}
+
+#contato .map iframe{
+  border-radius: 2rem;
+  box-shadow: 0px 0px 4px rgb(0 0 0 / 0.5);
 }
