@@ -16,6 +16,11 @@
   --fonte-size-texto: clamp(1.5rem, -6rem + 5vw, 2rem);
   font-size: 62.5% !important; /*rem = 10px*/
 }
+@media (max-width: 1370px) { 
+  #explicacao article .texto-container .texto{
+    height: auto;
+  }
+}
 @media (max-width: 1100px) { /* lembrar de ver dismensões até 1200, pode dar erro */
   :root{
     --fonte-size-texto: clamp(1.8rem, -5rem + 5vw, 2rem);
@@ -36,19 +41,15 @@
     
   }
   #explicacao article .texto-container .texto{
-    height: auto;
     width: 100%;
     padding: 2rem;
     border-radius: 0px;
     -webkit-box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.75);
--moz-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75);
-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75);
   }
   #explicacao article .texto-container .fundo-texto{
     height:auto;
-  }
-  #acompanhamento .topicos{
-    height: 45rem !important;
   }
   #contato{
     gap: 3rem !important;
@@ -67,10 +68,35 @@ box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75);
 
 }
 @media (max-width: 767px) {
-  #acompanhamento .topicos{
-    height: 45rem !important;
-    /* padding: 1.5rem; */
+  nav .links{
+    display: none;
   }
+  /* menu responsivo */
+  nav .btn-nav{
+    display: block;
+  }
+  .dropdown-navlinks.open{
+    height: auto;
+    display: block;
+  }
+  #competencia article p{
+    width: 100% !important;
+  }
+  #competencia article{
+    background: rgb(151, 106, 188);
+    background: linear-gradient(
+      51deg,
+      rgba(151, 106, 188, 1) 0%,
+      rgba(75, 41, 93, 1) 100%
+    ) !important;
+    -webkit-box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75);
+  }
+  #competencia {
+    height: auto !important;
+  }
+  
 }
 /* --- svg --- */
 .custom-shape-divider-bottom-1708726184 {
@@ -135,6 +161,34 @@ nav {
   padding-inline: 2rem;
   font-size: 1.6rem;
 }
+.btn-nav{
+  display: none;
+}
+/* MENU RESPONSIVO */
+.dropdown-navlinks{
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top:60px;
+  list-style: none;
+  width: 30rem;
+  height: 0px;
+  background: rgba(75, 41, 93, .5);
+  backdrop-filter: blur(15px);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.dropdown-navlinks li{
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dropdown-navlinks li a{
+  text-decoration: none;
+  color: var(--cor-primaria);
+}
 nav ul {
   display: flex;
   gap: 2.5rem;
@@ -151,6 +205,7 @@ nav ul li {
   list-style: none;
 }
 header {
+  z-index: 1;
   overflow: hidden;
   margin-top: 4rem;
   background: rgb(200, 148, 249);
@@ -159,13 +214,27 @@ header {
     rgba(200, 148, 249, 1) 0%,
     rgba(75, 41, 93, 1) 100%
   );
+  background-image: url("./assets/criancas-brincando.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
-  height: 64rem;
+  /* height: 64rem; */
+  height: 80rem;
+  
   width: 100%;
   display: flex;
   padding-block: 6.4rem;
   padding-inline: 10rem;
   justify-content: space-between;
+}
+header .fundo{
+  z-index: -1;
+  position: absolute;
+  background-color: rgb(0 0 0 / 0.5);
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
 }
 .texto-inicio {
   margin-top: 3rem;
@@ -249,7 +318,8 @@ h3 {
   border-radius: 2rem;
   height: 60vh;
   font-size: var(--fonte-size-texto);
-  padding: 5rem;
+  line-height: 3.2rem;
+  padding: 3.5rem;
   color: var(--cor-primaria);
 }
 #explicacao .texto-container .fundo-texto {
@@ -284,7 +354,7 @@ h3 {
   color: var(--cor-quartenaria);
 }
 #acompanhamento .topicos{
-  height: 35rem;
+  max-height: 45rem;
   padding: 1.5rem;
 }
 #acompanhamento .topicos div{
@@ -304,6 +374,7 @@ h3 {
 #acompanhamento .topicos p{
   font-size: var(--fonte-size-texto);
   margin-top: 1rem;
+  font-weight: 600;
 }
 .icon{
   font-size: 4rem;
@@ -334,9 +405,41 @@ h3 {
   margin-bottom: 2rem;
 }
 #competencia article p {
+  line-height: 3.5rem;
   color: var(--cor-primaria);
   width: 35%;
   font-size: var(--fonte-size-texto);
+}
+#competencia article strong{
+  color: var(--cor-destaque);
+}
+#competencia article ul li{
+  color: var(--cor-primaria);
+}
+#competencia-2{
+  margin-top: 4rem;
+}
+#competencia-2 > div{
+  padding: 1.6rem;
+  margin-block: 3rem;
+}
+#competencia-2 article{
+  font-size: var(--fonte-size-texto);
+  font-weight: 600;
+}
+#competencia-2 article ul{
+  padding: 4rem;
+}
+#competencia-2 article h2, strong{
+  color: var(--cor-quartenaria);
+}
+#competencia-2 .img-competencia img{
+  width: 100%;
+  border-radius: 2rem;
+  border: solid 1rem var(--cor-quartenaria);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.55);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.55);
+  box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.55);
 }
 #contato{
   margin-top: 5rem;
@@ -387,4 +490,26 @@ box-shadow:  20px 20px 60px rgba(78,41,93,1),
 #contato .map iframe{
   border-radius: 2rem;
   box-shadow: 0px 0px 4px rgb(0 0 0 / 0.5);
+}
+footer{
+  background: rgb(131,69,157);
+  background: linear-gradient(0deg, rgba(131,69,157,1) 0%, rgba(75,41,93,1) 100%);
+  overflow: hidden;
+  min-height: 35vh;
+}
+.footer-nav{
+  font-size: 1.2rem;
+  padding: 3rem;
+}
+.footer-nav >div{
+  text-align: center;
+  margin-block: 1rem;
+}
+
+.footer-nav a{
+  color: var(--cor-secundaria);
+  text-decoration: none;
+}
+.footer-nav a:hover{
+  color: var(--cor-secundaria);
 }
