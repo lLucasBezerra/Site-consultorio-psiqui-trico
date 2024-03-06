@@ -5,32 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <title>Consultório...</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <nav id="sidebar">
             <div>logo</div>
             <ul class="links">
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#explicacao">O que é TEA*</a></li>
                 <li><a href="#acompanhamento">Nosso Acompanhamento</a></li>
-                <li><a href="#competencia">Quem somos</a></li>
+                <li><a href="#competencia">Sobre</a></li>
                 <li><a href="#contato">contato</a></li>
-
             </ul>
+            <div class="btn-nav">
+                <i class="fa-solid fa-bars fa-lg"></i>
+            </div>
+            <div class="dropdown-navlinks">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#explicacao">O que é TEA*</a></li>
+                <li><a href="#acompanhamento">Nosso Acompanhamento</a></li>
+                <li><a href="#competencia">Sobre</a></li>
+                <li><a href="#contato">contato</a></li>
+            </div>
         </nav>
 
-        <header id="inicio">
-            <div class="texto-inicio">
+        <header id="inicio" class="row">
+            <div class="fundo"></div>
+            <div class="mt-5 texto-inicio col-lg-5">
                 <h1>Um <strong class="texto-destaque">espaço acolhedor</strong> para florescer</h1>
                 <p><strong class="texto-destaque">Psicologia infantil</strong> especializada em autismo, com <strong class="texto-destaque">amor e profissionalismo</strong>.</p>
                 <a class="botão-agenda" href="https://api.whatsapp.com/send?phone=5585987143035&text=Olá! Gostaria de Marcar uma consulta">
                     <i class="ph ph-whatsapp-logo"></i> Agendar Consulta
                 </a>
             </div>
-            <img src="./assets/foto-principal.png" alt="" height="400px">
-            <div class="custom-shape-divider-bottom-1708726184">
+            <!-- <div class="imagem-principal col-lg-7 d-flex justify-content-end">
+                <img src="./assets/foto-principal.png" alt="" height="400px">
+            </div> -->
+            <div class="custom-shape-divider-bottom-1708726184 col-12">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                     <path d="M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z" class="shape-fill"></path>
                 </svg>
@@ -38,58 +57,206 @@
         </header>
 
         <main>
-            <section id="explicacao">
+            <section id="explicacao" class="container-fluid">
                 <h1>Entenda o que é Autismo</h1>
                 <article>
                     
                     <!-- <div class="fundo-escuro"></div> -->
                     <div class="div-imagem">
-                        <svg id="sw-js-blob-svg" class="blob-image-1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1" transform="scale(1.7)">
-                            <defs> 
-                                <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
-                                    <stop id="stop1" stop-color="rgba(200, 148, 249, 1)" offset="0%"></stop>
-                                    <stop id="stop2" stop-color="rgba(75, 41, 93, 1)" offset="100%"></stop>
-                                </linearGradient>
-                            </defs>
-                        <path fill="url(#sw-gradient)" d="M15.3,-8.5C20.4,0,25.6,8.9,23,17.8C20.5,26.7,10.3,35.6,0.5,35.3C-9.3,35.1,-18.6,25.6,-21.8,16.3C-25,7.1,-22,-2,-17.4,-10.3C-12.7,-18.5,-6.4,-26.1,-0.6,-25.7C5.1,-25.3,10.2,-17.1,15.3,-8.5Z" width="100%" height="100%" transform="translate(50 50)" stroke-width="0" style="transition: all 0.3s ease 0s;" stroke="url(#sw-gradient)"></path>
-                      </svg>
-                      
-                      <svg id="sw-js-blob-svg" class="blob-image-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" version="1.1" transform="scale(1.5)" overflow="hidden">
-                            <image id="blob-image" xlink:href="./assets/foto-principal.png"  width="100%" height="100%"/>
-                            <defs> 
-                                <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
-                                    <stop id="stop1" stop-color="rgba(200, 148, 249, 1)" offset="0%"></stop>
-                                    <stop id="stop2" stop-color="rgba(75, 41, 93, 1)" offset="100%"></stop>
-                                </linearGradient>
-                            </defs>
-                            <path fill="url(#sw-gradient)" d="M21.8,-12.3C26.8,-3.8,28.6,6.9,24.5,17.6C20.3,28.3,10.1,39,-1,39.5C-12.1,40.1,-24.2,30.5,-28.5,19.7C-32.8,9,-29.3,-3,-23.2,-12C-17.2,-21,-8.6,-27.2,-0.1,-27.1C8.3,-27,16.7,-20.7,21.8,-12.3Z" width="100%" height="100%" transform="translate(50 50)" stroke-width="0" style="transition: all 0.3s ease 0s;"></path>
-                        </svg>
+                        <img class="imagem-explicacao" src="./assets/imagem-explicacao.png">
                     </div>
-                    <div class="texto">
-                        <p>
-                            O autismo, ou Transtorno do Espectro Autista (TEA), é um conjunto de características que afetam a forma como a pessoa se comunica, interage com o mundo e aprende. Cada pessoa com autismo é única e pode apresentar diferentes habilidades e desafios.
-                        </p>
-                        <h4>Importância do Tratamento</h4>
-                        <p>
-                            O tratamento precoce e individualizado é fundamental para o desenvolvimento das habilidades da pessoa com autismo e para melhorar sua qualidade de vida.
-                            Com o tratamento adequado, as pessoas com autismo podem desenvolver todo o seu potencial e alcançar seus sonhos. Elas podem ter sucesso na escola, no trabalho e na vida pessoal.
-                        </p>
+                    <div class="texto-container">
+                        <img class="fundo-texto" src="./assets/Fundo-texto.svg" alt="">
+                        <div class="texto">
+                            <p>
+                                O autismo, ou Transtorno do Espectro Autista (TEA), é um conjunto de características que afetam a forma como a pessoa se comunica, interage com o mundo e aprende. Cada pessoa com autismo é única e pode apresentar diferentes habilidades e desafios.
+                            </p>
+                            <h4>Importância do Tratamento</h4>
+                            <p>
+                                O tratamento precoce e individualizado é fundamental para o desenvolvimento das habilidades da pessoa com autismo e para melhorar sua qualidade de vida.
+                                Com o tratamento adequado, as pessoas com autismo podem desenvolver todo o seu potencial e alcançar seus sonhos. Elas podem ter sucesso na escola, no trabalho e na vida pessoal.O acompanhamento deve ser individualizado e considerar as necessidades de cada criança e família. A participação ativa da família é fundamental para o sucesso do tratamento. O tratamento do autismo é um processo contínuo e de longo prazo.
+                            </p>    
+                        </div>
                     </div>
                 </article>
             </section>
-            <section id="acompanhamento"></section>
-            <section id="competencia"></section>
-            <section id="contato">
-                <div>
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
+            <section id="acompanhamento" class="container">
+                <article>
+                    <h1>Acompanhando você e seu filho em cada passo da jornada</h1>
+                    <p>
+                        Nosso compromisso é oferecer um acompanhamento completo e personalizado para crianças com Transtorno do Espectro Autista (TEA) e seus pais. <strong>Acreditamos que cada criança é única e especial</strong>, e por isso, desenvolvemos planos de <strong>tratamento com abordagem humanizada</strong>, com foco no desenvolvimento individualizado, na <strong>construção de vínculos e na inclusão social</strong>.
+                    </p>
+                </article>
+
+                <div class="row topicos-container">
+                    <div class="col-lg-4 col-md-6 col-12 topicos">
+                        <div>
+                            <i class="fa-solid fa-person-rays icon"></i>
+                            <h3> Planos de tratamento individualizados</h3>
+                            <p>
+                                Adaptados às necessidades e habilidades de cada criança, considerando seus interesses, ritmos de aprendizagem e estilo de comunicação.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 topicos">
+                        <div>
+                            <i class="fa-solid fa-people-roof icon"></i>
+                            <h3>Reuniões com os pais</h3>
+                            <p>
+                                Orientação, feedback e troca de experiências sobre o desenvolvimento da criança, com foco no desenvolvimento de habilidades para lidar com as diferentes situações do dia a dia.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-12 topicos d-flex justify-content-center">
+                        <div>
+                            <i class="fa-solid fa-hands-holding-child icon"></i>
+                            <h3>Acompanhamento escolar</h3>
+                            <p>
+                                Intervenção junto à escola para promover a inclusão social e o aprendizado da criança, com foco na adaptação do ambiente escolar e capacitação de professores
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <iframe src="" frameborder="0"></iframe>
+                <div class="row topicos-container">
+                    <div class="col-lg-4 col-md-6 col-12 topicos">
+                        <div>
+                            <i class="fa-solid fa-people-robbery icon"></i>
+                            <h3>Grupos de apoio</h3>
+                            <p>
+                                Espaços para troca de experiências e aprendizado entre pais e familiares de crianças com autismo, promovendo o compartilhamento de informações, estratégias e apoio emocional.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 topicos">
+                        <div>
+                            <i class="fa-solid fa-handshake-simple icon"></i>
+                            <h3>Parcerias com instituições</h3>
+                            <p>
+                                Estabelecimento de parcerias com escolas, hospitais e outras clínicas para encaminhamento de pacientes, com o objetivo de ampliar o acesso a serviços especializados e promover a inclusão social da criança.
+                            </p>
+                        </div>    
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-12 topicos">
+                        <div>
+                            <i class="fa-solid fa-seedling icon"></i>
+                            <h3>Oficinas e workshops</h3>
+                            <p>
+                                Capacitação para pais, familiares e profissionais da educação sobre o autismo, com foco na promoção da inclusão social e na quebra de barreiras.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="competencia">
+                <article>
+                    <h2>Sobre</h2>
+                    <p>
+                        Somos um consultório especializado em psicologia infantil, com foco no atendimento de crianças com Transtorno do Espectro Autista (TEA). Nossa missão é oferecer um acompanhamento completo e personalizado, com foco no desenvolvimento individualizado, na construção de vínculos e na inclusão social. 
+                    </p>
+                    <p>
+                        Nossa equipe é composta por <strong>profissionais altamente qualificados e experientes em autismo infantil</strong>, incluindo psicólogos, psicopedagogos, fonoaudiólogos, terapeutas ocupacionais e assistentes sociais. Acreditamos na importância da abordagem humanizada e inovadora.
+                    </p>
+                </article>
+            </section>
+            <section id="competencia-2" class="container">
+                <div class="row">
+                    <article class="col-lg-6">
+                        <h2>
+                            <strong>Estamos comprometidos com a inclusão social</strong> e por isso buscamos:
+                        </h2>
+                        <ul>
+                            <li>
+                                <p>
+                                    <strong>Parcerias com escolas e instituições</strong>: Promoção da inclusão social e do aprendizado da criança.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <strong>Eventos e atividades</strong>: Participação em eventos e atividades que promovem a inclusão social e a visibilidade do autismo.
+                                </p>
+                            </li>
+                        </ul>
+                    </article>
+                    <div class="col-lg-6 img-competencia">
+                        <img src="./assets/IA-psicologo-palestrando-rdm.png" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <article class="col-lg-6">
+                        <h2>
+                            <strong>Acreditamos que o acompanhamento deve ser contínuo e personalizado</strong>, por isso:
+                        </h2>
+                        <ul>
+                            <li>
+                                <p>
+                                    <strong>Realizamos avaliações periódicas</strong>: Monitoramento do progresso da criança e ajustes no plano de tratamento.
+                                </p>
+                            </li>
+                            <li>
+                                <P>
+                                    <strong>Promovemos reuniões com os pais</strong>: Orientação, feedback e troca de experiências.
+                                </P>
+                            </li>
+                        </ul>
+                    </article>
+                    <div class="col-lg-6 img-competencia">
+                        <img src="./assets/psicologo-ajudando-em-escola-01.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <section id="contato" class="">
+                <article class="">
+                    <h2>Onde nos Encontrar</h2>
+                    <hr>
+                    <p>Você pode nos encontrar fisicamente no nosso consultório, na:</p>
+                    <p><strong class="texto-destaque">Rua general tal e tal, N° 1111</strong> </p>
+                    <p>próximo ao posto x</p>
+                    <p>atendendo a partir das</p>
+                    <p><strong class="texto-destaque">8:30 até as 20:00</strong></p>
+                    <p>Contato:</p>
+                    <a href="#"><strong class="texto-destaque"><i class="fa-brands fa-instagram fa-lg"></i> @consultorioA</strong></a>
+                    <a href="#"><strong class="texto-destaque"><i class="fa-solid fa-phone fa-lg"></i> (85) 98888-8888</strong></a>
+                </article>
+                <div class=" map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.209273360086!2d-38.48376262589875!3d-3.7645817433554503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74603ee2a15a3%3A0x8d1efb0de23670ce!2sCentro%20de%20Eventos%20do%20Cear%C3%A1!5e0!3m2!1spt-BR!2sbr!4v1709240250370!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </section>
             <section id="espaco"></section>
         </main>
-        <footer></footer>
+        <footer class="container-fluid">
+            <div class="row">
+                <div class="row d-flex justify-content-center footer-nav col-md-6 col-lg-12 ">
+                    <div class="col-md-2"><a href="#inicio">Início</a></div>
+                    <div class="col-md-2"><a href="#explicacao">O que é TEA*</a></div>
+                    <div class="col-md-2"><a href="#acompanhamento">Nosso Acompanhamento</a></div>
+                    <div class="col-md-2"><a href="#competencia">Sobre</a></div>
+                    <div class="col-md-2"><a href="#contato">contato</a></div>
+                </div>
+                <div class="row d-flex justify-content-center footer-nav col-md-6 col-lg-12 ">
+                    <div class="col-md-2">
+                        <a href="#"><i class="fa-brands fa-instagram fa-lg"></i> @consultorioA</a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="#"><i class="fa-solid fa-phone fa-lg"></i> (85) 98888-8888</a>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center">
+                        <a class="botão-agenda" href="https://api.whatsapp.com/send?phone=5585987143035&text=Olá! Gostaria de Marcar uma consulta">
+                            <i class="ph ph-whatsapp-logo"></i> Agendar Consulta
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
+<script>
+    const btn = document.querySelector('.btn-nav');
+    const icon = document.querySelector('.btn-nav i');
+    const dropdown = document.querySelector('.dropdown-navlinks');
+
+    btn.onclick = function(){
+        dropdown.classList.contains('open') ? dropdown.classList.remove("open") : dropdown.classList.add("open");
+        
+    }
+</script>
 </html>
