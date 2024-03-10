@@ -4,11 +4,14 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); */
 :root {
   --cor-primaria: #e8f1f2;
-  --cor-secundaria: #c894f9;
-  --cor-terciaria: #464659;
-  --cor-quartenaria: #4b295d;
+  /* --cor-secundaria: #c894f9; */
+  --cor-secundaria: #F1A0C5;
+  --cor-terciaria: #ac1257;
+  /* --cor-quartenaria: #4b295d; */
+  --cor-quartenaria: #94D2E4;
 
-  --cor-destaque: #ff6600;
+  /* --cor-destaque: #ff6600; */
+  --cor-destaque: #F1A0C5;
   --cor-wpp: #128b4d;
 
   --fonte-titulo: "Lato", sans-serif;
@@ -82,12 +85,8 @@
     width: 100% !important;
   }
   #competencia article {
-    background: rgb(151, 106, 188);
-    background: linear-gradient(
-      51deg,
-      rgba(151, 106, 188, 1) 0%,
-      rgba(75, 41, 93, 1) 100%
-    ) !important;
+    background: rgb(148,210,228);
+    background: linear-gradient(51deg, rgba(148,210,228,1) 0%, rgba(37,144,175,1) 100%) !important;
     -webkit-box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
     box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
@@ -151,7 +150,7 @@ nav {
   position: fixed;
   top: 0;
   z-index: 1000;
-  background-color: var(--cor-quartenaria);
+  background-color: var(--cor-destaque);
   color: var(--cor-primaria);
   display: flex;
   justify-content: space-between;
@@ -172,7 +171,7 @@ nav {
   list-style: none;
   width: 30rem;
   height: 0px;
-  background: rgba(75, 41, 93, 0.5);
+  background: rgba(60, 127, 167, 0.5);
   backdrop-filter: blur(15px);
   border-radius: 1rem;
   overflow: hidden;
@@ -297,7 +296,7 @@ h3 {
   animation-timeline: View(300px 100px);
   /* animation-range: ; */
   text-align: center;
-  color: var(--cor-quartenaria);
+  color: var(--cor-terciaria);
   font-size: 4rem;
 }
 #explicacao article {
@@ -311,23 +310,19 @@ h3 {
   animation-timeline: View(700px 50px);
   opacity: 0;
   border-radius: 5rem;
-  width: 45rem;
+  width: 30rem;
 }
 #explicacao article .texto-container {
   animation: slide-in-right 0.5s linear forwards;
   animation-timeline: View(700px 50px);
   opacity: 0;
   position: relative;
-  padding: 3rem;
+  padding: 5rem;
 }
 #explicacao .texto {
   align-self: center;
-  background: rgb(151, 106, 188);
-  background: linear-gradient(
-    51deg,
-    rgba(151, 106, 188, 1) 0%,
-    rgba(75, 41, 93, 1) 100%
-  );
+  background: rgb(209,40,117);
+background: linear-gradient(51deg, rgba(209,40,117,1) 0%, rgba(230,119,170,1) 100%);
   border-radius: 2rem;
   height: 60vh;
   font-size: var(--fonte-size-texto);
@@ -339,13 +334,13 @@ h3 {
   position: absolute;
   z-index: -2;
   width: 100%;
-  height: 70vh;
+  height: 100%;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
 }
 #explicacao .texto h4 {
-  color: var(--cor-destaque);
+  color: var(--cor-quartenaria);
   text-shadow: 0px 3px 3px rgb(0 0 0 / 0.3);
   font-size: 2.4rem;
   margin-block: 1rem;
@@ -363,11 +358,11 @@ h3 {
   font-size: var(--fonte-size-texto);
 }
 #acompanhamento article h1 {
-  color: var(--cor-quartenaria);
+  color: var(--cor-terciaria);
   margin-bottom: 2rem;
 }
 #acompanhamento article strong {
-  color: var(--cor-quartenaria);
+  color: var(--cor-terciaria);
 }
 #acompanhamento .topicos {
   animation: slide-left 0.5s linear forwards;
@@ -384,6 +379,9 @@ h3 {
   display: block;
   text-align: center;
   justify-content: center;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.3);
 }
 #acompanhamento .topicos h3 {
   font-size: 2rem;
@@ -411,7 +409,7 @@ h3 {
 }
 #competencia article {
   padding: 3rem;
-  background-image: url("./assets/fundo-competencia.svg");
+  background-image: url("./assets/fundo-competencia-atualizada.svg");
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -449,24 +447,20 @@ h3 {
 }
 #competencia-2 article h2,
 strong {
-  color: var(--cor-quartenaria);
+  color: var(--cor-terciaria);
 }
 #competencia-2 .img-competencia img {
   width: 100%;
   border-radius: 2rem;
-  border: solid 1rem var(--cor-quartenaria);
+  border: solid 1rem var(--cor-terciaria);
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.55);
   -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.55);
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.55);
 }
 #contato {
   margin-top: 5rem;
-  background: rgb(164, 86, 195);
-  background: linear-gradient(
-    0deg,
-    rgba(164, 86, 195, 1) 1%,
-    rgba(78, 41, 93, 1) 100%
-  );
+  background: #F1A0C5;
+  
   width: 100%;
   padding: 4.2rem;
   display: flex;
@@ -476,13 +470,10 @@ strong {
 }
 #contato article {
   border-radius: 50px;
-  background: linear-gradient(
-    145deg,
-    rgba(164, 86, 195, 1),
-    rgba(78, 41, 93, 1)
-  );
-  box-shadow: 20px 20px 60px rgba(78, 41, 93, 1),
-    -20px -20px 60px rgba(164, 86, 195, 1);
+  background: rgb(209,40,117);
+  background: linear-gradient(51deg, rgba(209,40,117,1) 0%, rgba(230,119,170,1) 100%);
+  box-shadow:  20px 20px 60px #cd88a7,
+             -20px -20px 60px #ffb8e3;
   color: var(--cor-primaria);
   padding: 2.5rem;
   width: 60rem;
@@ -490,7 +481,7 @@ strong {
   border-radius: 2rem;
 }
 #contato article h2 {
-  color: var(--cor-destaque);
+  color: var(--cor-quartenaria);
   font-size: 2.5rem;
 }
 #contato article .texto-destaque {
@@ -501,6 +492,9 @@ strong {
 
   text-decoration: none;
   color: var(--cor-primaria);
+}
+#contato .texto-destaque{
+  color: var(--cor-quartenaria);
 }
 #contato article a .texto-destaque {
   display: flex;
@@ -518,12 +512,8 @@ strong {
   box-shadow: 0px 0px 4px rgb(0 0 0 / 0.5);
 }
 footer {
-  background: rgb(131, 69, 157);
-  background: linear-gradient(
-    0deg,
-    rgba(131, 69, 157, 1) 0%,
-    rgba(75, 41, 93, 1) 100%
-  );
+  background: rgb(84,170,195);
+background: linear-gradient(0deg, rgba(84,170,195,1) 0%, rgba(37,144,175,1) 100%);
   overflow: hidden;
   min-height: 35vh;
 }
@@ -536,12 +526,12 @@ footer {
   margin-block: 1rem;
 }
 
-.footer-nav a {
-  color: var(--cor-secundaria);
+.footer-nav a:not(.botão-agenda) {
+  color: var(--cor-primaria);
   text-decoration: none;
 }
 .footer-nav a:hover {
-  color: var(--cor-secundaria);
+  color: var(--cor-terciaria);
 }
 
 @keyframes scale-up-tr {
