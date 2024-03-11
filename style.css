@@ -4,20 +4,25 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); */
 :root {
   --cor-primaria: #e8f1f2;
-  /* --cor-secundaria: #c894f9; */
   --cor-secundaria: #F1A0C5;
   --cor-terciaria: #ac1257;
-  /* --cor-quartenaria: #4b295d; */
   --cor-quartenaria: #94D2E4;
 
-  /* --cor-destaque: #ff6600; */
+  
   --cor-destaque: #F1A0C5;
   --cor-wpp: #128b4d;
 
   --fonte-titulo: "Lato", sans-serif;
   --font-texto: "Poppins", sans-serif;
-  --fonte-size-texto: clamp(1.5rem, -6rem + 5vw, 2rem);
+  --fonte-size-texto: clamp(1.5rem, -6rem + 5vw, 2.3rem);
   font-size: 62.5% !important; /*rem = 10px*/
+}
+/* RESPONSIVIDADE */
+@media (min-width: 1330px) {
+  #competencia article p {
+    line-height: 3.5rem;
+    width: 35% !important;
+  }
 }
 @media (max-width: 1370px) {
   #explicacao article .texto-container .texto {
@@ -33,6 +38,8 @@
     padding-inline: 1rem !important;
   }
   #explicacao .imagem-explicacao {
+    display: flex;
+    justify-content: center;
     width: 100%;
   }
   #explicacao article {
@@ -41,7 +48,6 @@
   }
   #explicacao article .texto-container {
     padding: 0px !important;
-    animation-timeline: View(990px 50px) !important;
   }
   #explicacao article .texto-container .texto {
     width: 100%;
@@ -53,6 +59,13 @@
   }
   #explicacao article .texto-container .fundo-texto {
     height: auto;
+  }
+  #competencia{
+    background-image: url('./assets/Dr-Giovanna-dias-competencia-2.jpeg') !important;
+  }
+  #competencia article p {
+    line-height: 2.5rem;
+    width: 60% !important;
   }
   #contato {
     gap: 3rem !important;
@@ -68,7 +81,16 @@
     overflow: hidden;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 790px) {
+  header{
+    background-image: url("./assets/Dr-Giovanna-dias-fundo-2.jpeg") !important;
+  }
+  header .imagem-principal img{
+    margin-bottom: 4rem;
+    height: 30rem !important;
+    width: 100%;
+    align-self: center;
+  }
   nav .links {
     display: none;
   }
@@ -81,9 +103,6 @@
     height: auto;
     display: block;
   }
-  #competencia article p {
-    width: 100% !important;
-  }
   #competencia article {
     background: rgb(148,210,228);
     background: linear-gradient(51deg, rgba(148,210,228,1) 0%, rgba(37,144,175,1) 100%) !important;
@@ -91,8 +110,21 @@
     -moz-box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
     box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
   }
+  #competencia article p {
+    line-height: 2.5rem;
+    width: 100% !important;
+  }
   #competencia {
     height: auto !important;
+  }
+}
+@media (min-width:600px) and (max-width: 700px){
+  header .imagem-principal{
+    justify-content: center !important;
+  }
+  header .imagem-principal img{
+    width: 78%;
+    
   }
 }
 /* --- svg --- */
@@ -145,6 +177,7 @@ body::-webkit-scrollbar-thumb {
   width: auto;
   padding: 0px !important;
 }
+/* === NAVBAR === */
 nav {
   width: 100%;
   position: fixed;
@@ -201,6 +234,7 @@ nav ul a:hover {
 nav ul li {
   list-style: none;
 }
+/* === HEADER === */
 header {
   z-index: 1;
   overflow: hidden;
@@ -211,12 +245,12 @@ header {
     rgba(200, 148, 249, 1) 0%,
     rgba(75, 41, 93, 1) 100%
   );
-  background-image: url("./assets/criancas-brincando.jpg");
+  background-image: url("./assets/Dr-Giovanna-dias-fundo.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   /* height: 64rem; */
-  height: 80rem;
+  height: 100rem;
 
   width: 100%;
   display: flex;
@@ -283,6 +317,9 @@ h3 {
   background-color: #169755;
   color: var(--cor-primaria) !important;
 }
+
+/* === EXPLICACAO === */
+
 #explicacao {
   margin-top: 2.4rem;
   display: flex;
@@ -314,7 +351,8 @@ h3 {
 }
 #explicacao article .texto-container {
   animation: slide-in-right 0.5s linear forwards;
-  animation-timeline: View(700px 50px);
+  animation-timeline: View();
+  animation-range: entry;
   opacity: 0;
   position: relative;
   padding: 5rem;
@@ -346,6 +384,8 @@ background: linear-gradient(51deg, rgba(209,40,117,1) 0%, rgba(230,119,170,1) 10
   margin-block: 1rem;
 }
 
+/* === ACOMPANHAMENTO === */
+
 #acompanhamento {
   padding-block: 5rem;
 }
@@ -367,7 +407,8 @@ background: linear-gradient(51deg, rgba(209,40,117,1) 0%, rgba(230,119,170,1) 10
 #acompanhamento .topicos {
   animation: slide-left 0.5s linear forwards;
   opacity: 0;
-  animation-timeline: View(700px 50px);
+  animation-timeline: View();
+  animation-range: entry;
   max-height: 45rem;
   padding: 1.5rem;
 }
@@ -400,10 +441,11 @@ background: linear-gradient(51deg, rgba(209,40,117,1) 0%, rgba(230,119,170,1) 10
 
 #competencia {
   margin-top: 5rem;
-  height: 100vh;
+  height: 120vh;
   overflow: hidden;
-  background-image: url("./assets/imagem-explicacao-03-copia.jpg");
-  background-size: cover;
+  background-image: url("./assets/Dr-Giovanna-dias-competencia.jpeg");
+  /* background-size: cover; */
+  background-position: right;
   background-repeat: no-repeat;
   box-shadow: inset 0px 0px 5rem rgb(0 0 0 / 0.5);
 }
@@ -420,7 +462,7 @@ background: linear-gradient(51deg, rgba(209,40,117,1) 0%, rgba(230,119,170,1) 10
   margin-bottom: 2rem;
 }
 #competencia article p {
-  line-height: 3.5rem;
+  line-height: 2.5rem;
   color: var(--cor-primaria);
   width: 35%;
   font-size: var(--fonte-size-texto);
@@ -430,6 +472,7 @@ background: linear-gradient(51deg, rgba(209,40,117,1) 0%, rgba(230,119,170,1) 10
 }
 #competencia article ul li {
   color: var(--cor-primaria);
+  font-size: calc(var(--fonte-size-texto) - .3rem);
 }
 #competencia-2 {
   margin-top: 4rem;
